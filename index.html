@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Daily Journal</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <main id="container">
+
+        <div class="image-container">
+            <img src="typewriter.jpg" alt="typewriter on a desk">
+        </div>
+
+        <h1>Jake Butler's daily NSS C44 Journal</h1>
+
+        <div>
+            <form action="" method="get">
+                <!-- 
+
+                Enter Date
+
+             -->
+                <div>
+                    <input type="date">
+                </div>
+                <!-- 
+
+                Enter Concept Covered
+
+             -->
+                <div>
+                    <input type="text" placeholder="Concept Covered">
+                </div>
+                <!-- 
+
+                Enter Journal Entry Here
+
+             -->
+                <div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter Journal Entry Here"></textarea>
+                </div>
+                <!-- 
+
+                Select Mood Here
+                
+             -->
+                <div>
+                    <label for="mood">How are you feeling today?</label>
+                    <select>
+                        <option value="positive">Positive</option>
+                        <option value="anxious">Anxious</option>
+                        <option value="tired">Tired</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button name="record">Record Journal Entry</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div>
+            <p>Previous entries will go here</p>
+        </div>
+
+        <footer>
+            Created by Jake Butler, https://github.com/TJakeButler, ©
+        </footer>
+    </main>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
