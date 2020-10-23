@@ -1,0 +1,32 @@
+{
+    "entries": [
+        {
+            "id": 1,
+            "date": "10/10/2020",
+            "concept": "HTML & CSS",
+            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+            "mood": "Anxious"
+        },
+        {
+            "id": 2,
+            "date": "10/11/2020",
+            "concept": "HTML & CSS",
+            "entry": "We learned about functions and modularizing code",
+            "mood": "Tired"
+        },
+        {
+            "id": 3,
+            "date": "10/12/2020",
+            "concept": "HTML & CSS",
+            "entry": "We learned to take breaks over the weekend to let concepts solidify",
+            "mood": "Positive"
+        },
+        {
+            "id": 4,
+            "date": "10/12/2020",
+            "concept": "HTML & CSS",
+            "entry": "We learned to take breaks over the weekend to let concepts solidify",
+            "mood": "Positive"
+        }
+    ]
+}
