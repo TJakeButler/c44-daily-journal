@@ -6,31 +6,16 @@
  *      the entries for different purposes.
  */
 
-// This is the original data.
-let journal = [
-    {
-        id: 1,
-        date: "10/10/2020",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Anxious"
-    },
-    {
-        id: 2,
-        date: "10/11/2020",
-        concept: "HTML & CSS",
-        entry: "We learned about functions and modularizing code",
-        mood: "Tired"
-    },
-    {
-        id: 3,
-        date: "10/12/2020",
-        concept: "HTML & CSS",
-        entry: "We learned to take breaks over the weekend to let concepts solidify",
-        mood: "Positive"
-    }
-]
+ const eventHub = document.querySelector(".container")
 
+ const dispatchClickEvent = () => {
+     
+     const journalClickEvent = new CustomEvent("journalWasClicked")
+     eventHub.dispatchEvent(journalClickEvent)
+ }
+
+// This is the original data.
+let journal = []
 
 // This function will fetch data from the API server
 
@@ -42,8 +27,6 @@ export const getEntries = () => {
             journal = parsedEntries
         })
 }
-
-
 
 /*
     You export a function that provides a version of the
@@ -58,4 +41,14 @@ export const useJournalEntries = () => {
 }
 
 
-
+export const saveEntry = entry => {
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getEntries)
+    .then(dispatchClickEvent)
+}
